@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -20px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="cards-list">
+    <div class="card 1">
+        <div class="card_image"> <img src="https://www.logolynx.com/images/logolynx/c0/c04a09ae9408cc44af1ca560a37693ef.jpeg"/> </div>
+        <div class="card_title title-black">
+        <p>Team Liquid</p>
+        </div>
+    </div>
+    
+        <div class="card 2">
+        <div class="card_image">
+        <img src="https://cdn.eslgaming.com/play/eslgfx/gfx/logos/teams/13358000/13358425_medium.jpg" />
+        </div>
+        <div class="card_title title-black">
+        <p>Cloud9</p>
+        </div>
+    </div>
+
+</body>
+</html> 
