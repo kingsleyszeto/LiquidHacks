@@ -3,6 +3,7 @@ import time
 import config
 import pymongo
 from pymongo import MongoClient
+import webbrowser
 
 cluster = MongoClient(f"mongodb+srv://kingszeto:{config.mongo_password}@cluster0.zfror.mongodb.net/<dbname>?retryWrites=true&w=majority")
 db = cluster["rootwitch"]
@@ -32,4 +33,5 @@ while True:
             small_image=party['small'], small_text=party['match'],\
             large_image=party['big'], large_text=party['team'], start = time.time(),\
             party_size=[1,10000], party_id=party['_id']+'A', join=party['_id'])
+        webbrowser.open('http://kingsleyszeto.me/') 
     # print(client.sock_reader.feed_data)
