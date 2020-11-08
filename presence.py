@@ -26,7 +26,7 @@ while True:
     time.sleep(1)
     a = client.loop.run_until_complete(client.read_output())
     if a['evt'] == 'ACTIVITY_JOIN':
-        party=collection.find({"_id": a['data']['secret']})
+        party=collection.find({"_id": a['data']['secret']})[0]
         client.set_activity(pid=0, state=f"Watching {party['match']}",\
             details= f"Rooting for {party['team']}",\
             small_image=party['small'], small_text=party['match'],\
