@@ -8,7 +8,7 @@ import webbrowser
 cluster = MongoClient(f"mongodb+srv://kingszeto:{config.mongo_password}@cluster0.zfror.mongodb.net/<dbname>?retryWrites=true&w=majority")
 db = cluster["rootwitch"]
 collection = db["teams"]
-party = collection.find({"_id": "tlwin2020"})[0]
+party = collection.find({"_id": "c9win2020"})[0]
 print(party)
 client_id = config.client_id
 client = Client(client_id)
